@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Appointment</title>
+    <link rel="stylesheet" href="appoint.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="bookingForm">
+            <h1>Book an Appointment</h1>
+            <p>Fill out the form below to schedule your hospital appointment.</p>
+            <form id="appointmentForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required minlength="2" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="johndoe@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required minlength="10" placeholder="9547152739">
+                </div>
+                <div class="form-group">
+                    <label for="appointmentType">Specialist</label>
+                    <select id="appointmentType" name="appointmentType" required>
+                        <option value="">Select Appointment for</option>
+                        <option value="Cardiology">Cardiology</option>
+                        <option value="Dentistry">Dentistry</option>
+                        <option value="ENT Specialist">ENT Specialist</option>
+                        <option value="Orthopedic">Orthopedic</option>
+                        <option value="Neuroanatomy">Neuroanatomy</option>
+                        <option value="Blood Screening">Blood Screening</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Appointment Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="timeSlot">Time Slot</label>
+                    <select id="timeSlot" name="timeSlot" required>
+                        <option value="">Select a time slot</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Book Appointment</button>
+            </form>
+        </div>
+        <div class="card" id="confirmationCard" style="display: none;">
+            <h1>Appointment Confirmed</h1>
+            <p>Your appointment has been successfully booked.</p>
+                <p>Details are sent to your mail.
+            </p>
+            <div id="appointmentDetails"></div>
+            <button id="bookAnother" class="btn">Book Another Appointment</button>
+        </div>
+    </div>
+    <script src="appoint.js"></script>
+</body>
+</html>
